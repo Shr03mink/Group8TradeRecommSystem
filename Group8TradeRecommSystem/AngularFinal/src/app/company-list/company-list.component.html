@@ -1,0 +1,41 @@
+<div class="list row">
+  <div class="col-md-6">
+    <br><br>
+    <h4>Company List</h4>
+    <br>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let company of companies; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveCompany(company, i)"
+      >
+        {{ company.symbol }}
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentCompany">
+      <br><br>
+      <h4>Company</h4>
+      <div>
+        <label><strong>Symbol:</strong></label> {{ currentCompany.symbol }}
+      </div>
+      <div>
+        <label><strong>Open:</strong></label> {{ currentCompany.open }}
+      </div>
+      <div>
+        <label><strong>Previous close:</strong></label> {{ currentCompany.previous_closed }}
+      </div>
+      <div>
+        <label><strong>Day low:</strong></label> {{ currentCompany.day_low }}
+      </div>
+      <div>
+        <label><strong>Day high:</strong></label> {{ currentCompany.day_high }}
+      </div>
+      <div>
+        <label><strong>Percentage change:</strong></label> {{ currentCompany.perc_change }}
+      </div>
+  </div>
+</div>

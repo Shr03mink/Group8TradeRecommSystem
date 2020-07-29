@@ -1,0 +1,20 @@
+
+.container-class {
+  background-image: url("/assets/img/stocks.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1110px;
+  height: 550px;
+
+}
+
+.centered {
+  position: absolute;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: inherit;
+  top: 65%;
+  left: 80%;
+  transform: translate(-65%, -80%);
+}
