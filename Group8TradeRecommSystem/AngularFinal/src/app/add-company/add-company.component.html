@@ -1,0 +1,77 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <div class="form-group">
+      <label for="title">Company Symbol</label>
+      <input
+        type="text"
+        class="form-control"
+        id="symbol"
+        required
+        [(ngModel)]="company.symbol"
+        name="symbol"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="open">Open</label>
+      <input
+        class="form-control"
+        id="open"
+        required
+        [(ngModel)]="company.open"
+        name="open"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="prevclose">Previous Close</label>
+      <input
+        class="form-control"
+        id="prevclose"
+        required
+        [(ngModel)]="company.previous_closed"
+        name="prevclose"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="dayhigh">Day high</label>
+      <input
+        class="form-control"
+        id="dayhigh"
+        required
+        [(ngModel)]="company.day_high"
+        name="dayhigh"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="daylow">Day low</label>
+      <input
+        class="form-control"
+        id="daylow"
+        required
+        [(ngModel)]="company.day_low"
+        name="daylow"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="change">Change</label>
+      <input
+        class="form-control"
+        id="change"
+        required
+        [(ngModel)]="company.perc_change"
+        name="change"
+      />
+    </div>
+
+    <button (click)="saveCompany()" class="btn btn-success">Submit</button>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>You have submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newCompany()">Add</button>
+  </div>
+</div>

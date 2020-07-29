@@ -1,0 +1,8 @@
+Problem Statement : Build a trade recommendation system based on user selected sectors from nifty stocks.
+
+1. File handling is used to read sectoral indices.
+2. We have added both single and multi-module approach for our backend.
+3. Requirement:
+          a.Change the file path in the code according to the location of the spring folder in the system.
+          
+ASSUMPTION : The top gainers/losers are calculated by comparing the change in closing price over two weeks.
